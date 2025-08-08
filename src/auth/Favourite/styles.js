@@ -3,7 +3,11 @@ export const Container = styled.div`
 font-family: 'poppins';
   padding: 2rem;
   background:rgb(246, 249, 252);
-  height: 100vh;
+  /* height: 100vh; */
+
+  @media (max-with:320px) {
+    height: auto;
+  }
 `;
 
 export const Title = styled.h5`
@@ -39,6 +43,8 @@ export const CarGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 40px;
+
+  
 `;
 
 export const CarCard = styled.div`

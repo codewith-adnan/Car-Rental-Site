@@ -38,7 +38,6 @@ const CreatePassword = () => {
   const password = watch("password");
 
   const onSubmit = () => {
-    // console.log("Password Created:", data.password);
     navigate("/pages/Home");
   };
 
