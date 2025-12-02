@@ -4,8 +4,8 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   font-family: 'poppins';
   background-color: #e5e7eb;
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +27,7 @@ export const Container = styled.div`
   flex-direction: column;
   background: #fff;
   width: 100%;
-  height: 100%;
+  height: auto;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   justify-content: center;
@@ -35,6 +35,9 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
+  }
+  @media (max-width: 420px) {
+    width:100%
   }
 `;
 
@@ -46,12 +49,18 @@ export const ImageSection = styled.div`
   @media (min-width: 768px) {
     width: 50%;
   }
+  @media (max-width: 420px) {
+    display: none;
+  }
 `;
 
 export const BackgroundImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @media (max-with:420px){
+    display: none;
+  }
 `;
 
 export const LogoWrapper = styled.div`

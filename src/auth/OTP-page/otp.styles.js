@@ -28,6 +28,10 @@ export const ImageSection = styled.div`
   @media (min-width: 768px) {
     width: 50%;
   }
+  @media (max-width: 420px) {
+    display: none;
+    
+  }
 `;
 
 export const ImageOverlay = styled.img`

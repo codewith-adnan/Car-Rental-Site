@@ -26,15 +26,20 @@ export const ImageSection = styled.div`
   width: 100%;
   height: auto;
 
-  @media (min-width: 768px) {
-    width: 50%;
+  @media (max-width: 420px) {
+    display: none;
+    height: auto;
   }
+  
 `;
 
 export const BackgroundImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @media (max-with:420px){
+    display: none;
+  }
   
 `;
 

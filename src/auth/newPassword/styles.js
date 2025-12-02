@@ -52,6 +52,9 @@ export const RightSection = styled.section`
     width: 50%;
     padding: 4rem;
   }
+  @media (min-width: 420px){
+    margin-top: 1rem;
+  }
 
   display: flex;
   flex-direction: column;

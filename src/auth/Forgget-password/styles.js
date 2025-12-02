@@ -32,6 +32,10 @@ export const ForgettImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @media (max-width: 420px) {
+    display: none;
+  }
+  
 `;
 
 export const ForgettRight = styled.div`
@@ -41,6 +45,9 @@ export const ForgettRight = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    margin-top: -1rem;
+  }
 `;
 
 export const ForgettBrand = styled.img`

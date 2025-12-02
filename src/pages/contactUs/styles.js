@@ -10,17 +10,26 @@ export const ContactContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 420px) {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    overflow: hidden;
+    padding: 0rem;
+  }
 `;
 
 export const ContactWrapper = styled.div`
   display: flex;
   width: 90%;
-  height: 100vh;
+  height: auto;
   gap: 2rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
     height: auto;
+    width: 100%;
+    margin-top: 25px;
   }
 `;
 
@@ -39,12 +48,13 @@ export const InfoBox = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
+    max-width: 75%;
   }
 `;
 
 export const ContactTitle = styled.h2`
   font-weight: 600;
-  font-size: 1%.75rem;
+  font-size: 1.75rem;
   margin-bottom: 0.75rem;
 `;
 
@@ -104,6 +114,10 @@ export const FormBox = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  @media (max-width: 768px) {
+    width: 75%;
+    margin-bottom: 15px;
+  }
 `;
 
 export const InputGroup = styled.div`
