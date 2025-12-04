@@ -4,47 +4,79 @@ export const Wrapper = styled.div`
   font-family: 'poppins';
   background-color: #e5e7eb;
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* Center vertically */
   justify-content: center;
   width: 100%;
   min-height: 100vh;
   margin-top: 0rem;
+  overflow-y: auto; /* Enable scrolling */
+
+  /* Custom Scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+  }
 
   @media (max-width: 768px) {
-    padding: 0.5rem;
+    align-items: flex-start;
+    padding: 1rem;
   }
 `;
 
 export const Container = styled.div`
   display: flex;
   width: 100%;
+  max-width: 1000px;
   margin-top: 0rem;
   flex-direction: column;
+  background: #fff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     flex-direction: row;
+  }
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 `;
 
 export const ImageSection = styled.div`
   width: 100%;
   height: auto;
+  position: relative;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 
   @media (max-width: 768px) {
     display: none;
-    height: auto;
   }
-  
 `;
 
 export const BackgroundImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   @media (max-width: 768px){
     display: none;
   }
-  
 `;
 
 export const FormSection = styled.div`

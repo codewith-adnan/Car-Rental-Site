@@ -5,14 +5,18 @@ export const Navbar = styled.nav`
   font-family: 'poppins';
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem ;
+  padding: 4px 1rem ;
   background-color: #fff;
   position: relative;
   z-index: 1000;
   background-color: white;
   border-bottom: black;
-
+  
+@media (max-width: 768px) {
+  padding: 10px 1rem;
+}
 `;
+
 
 export const LogoContainer = styled.div`
   display: flex;

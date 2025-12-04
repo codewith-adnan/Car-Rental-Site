@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   font-family: 'poppins';
   background-color: #e5e7eb;
-  height: auto;
+  min-height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
@@ -12,12 +12,26 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-y: auto;
+
+  /* Custom Scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+  }
 
   @media (max-width: 768px) {
     align-items: flex-start;
-    overflow-y: auto;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 `;
 
@@ -27,24 +41,31 @@ export const Container = styled.div`
   flex-direction: column;
   background: #fff;
   width: 100%;
+  max-width: 1000px; /* Limit max width for better centering on large screens */
   height: auto;
+  min-height: 600px; /* Ensure reasonable height */
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   justify-content: center;
   align-items: center;
+  border-radius: 8px; /* Add some border radius */
 
   @media (min-width: 768px) {
     flex-direction: row;
   }
   @media (max-width: 768px) {
-    width:100%
+    width: 100%;
+    min-height: auto;
+    margin-top: 2rem; /* Add some top margin on mobile */
+    margin-bottom: 2rem;
   }
 `;
 
 export const ImageSection = styled.div`
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 600px;
 
   @media (min-width: 768px) {
     width: 50%;
@@ -58,6 +79,10 @@ export const BackgroundImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
   @media (max-width: 768px){
     display: none;
   }

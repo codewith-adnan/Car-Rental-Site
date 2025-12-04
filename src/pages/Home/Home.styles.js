@@ -66,9 +66,10 @@ export const Title5 = styled.h2`
 `;
 
 export const SubTitle5 = styled.p`
-  font-size: 26px;
+  font-size: 22px;
   color: #333;
   width: 70%;
+  margin-top:-0.5px;
   margin-bottom: 10px;
 
   @media(max-width: 768px) {
