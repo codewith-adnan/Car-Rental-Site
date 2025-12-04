@@ -5,7 +5,7 @@ export const Navbar = styled.nav`
   font-family: 'poppins';
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0 1rem ;
   background-color: #fff;
   position: relative;
   z-index: 1000;

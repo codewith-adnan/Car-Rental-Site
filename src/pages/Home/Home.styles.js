@@ -2,9 +2,9 @@
 import styled from 'styled-components';
 
 
- 
 
- 
+
+
 // Car Banner
 
 
@@ -43,13 +43,13 @@ export const GraphicsBehind = styled.div`
 export const TextContent5 = styled.div`
   position: absolute;
   width: 20%;
-  top: 48%;
-  right: 7px;
+  top: 40%;
+  right: 20px;
 
   @media(max-width: 768px) {
     width: 90%;
     position: static;
-    margin-top: 30px;
+    margin-top: 15px;
     text-align: center;
   }
 `;
@@ -58,7 +58,7 @@ export const Title5 = styled.h2`
   font-size: 32px;
   font-weight: 700;
   color: #000;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 
   @media(max-width: 768px) {
     font-size: 24px;
@@ -69,7 +69,7 @@ export const SubTitle5 = styled.p`
   font-size: 26px;
   color: #333;
   width: 70%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   @media(max-width: 768px) {
     font-size: 18px;
