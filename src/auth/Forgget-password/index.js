@@ -3,18 +3,20 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 import {
-  ForgettWrapper,
-  ForgettContainer,
-  ForgettLeft,
-  ForgettImage,
-  ForgettRight,
-  ForgettBrand,
-  ForgettTitle,
-  ForgettText,
-  ForgettForm,
-  ForgettLabel,
-  ForgettInput,
-  ForgettButton,
+  Wrapper,
+  Container,
+  ImageSection,
+  BackgroundImage,
+  LogoWrapper,
+  Logo,
+  Title,
+  Subtitle,
+  FormSection,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  SubmitButton,
   ErrorText,
 } from "./styles";
 
@@ -34,40 +36,43 @@ const Forgget = () => {
   };
 
   return (
-    <ForgettWrapper>
-      <ForgettContainer>
-        <ForgettLeft>
-          <ForgettImage src={cover} alt="Parking lot" />
-        </ForgettLeft>
+    <Wrapper>
+      <Container>
+        <ImageSection>
+          <BackgroundImage src={cover} alt="Parking lot" />
+        </ImageSection>
 
-        <ForgettRight>
-          <ForgettBrand src={logo} alt="CharterCar full logo" />
-          <ForgettTitle>Forgot your Account?</ForgettTitle>
-          <ForgettText>Please enter your registered email</ForgettText>
+        <FormSection>
+          <LogoWrapper>
+            <Logo src={logo} alt="CharterCar full logo" />
+          </LogoWrapper>
 
-          <ForgettForm onSubmit={handleSubmit(onSubmit)}>
-            <ForgettLabel htmlFor="email">Email</ForgettLabel>
-            <ForgettInput
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              {...register("email", {
-                required: "Email is required",
-                pattern: {
-                  value: /^\S+@\S+\.\S+$/,
-                  message: "Enter a valid email address",
-                },
-              })}
-            />
-            {errors.email && (
-              <ErrorText > {errors.email.message}</ErrorText>
-                 )
-            }
-            <ForgettButton type="submit">Continue</ForgettButton>
-          </ForgettForm>
-        </ForgettRight>
-      </ForgettContainer>
-    </ForgettWrapper>
+          <Title>Forgot your Account?</Title>
+          <Subtitle>Please enter your registered email</Subtitle>
+
+          <Form onSubmit={handleSubmit(onSubmit)}>
+            <FormGroup>
+              <Label htmlFor="email">Email</Label>
+              <Input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^\S+@\S+\.\S+$/,
+                    message: "Enter a valid email address",
+                  },
+                })}
+              />
+              {errors.email && <ErrorText>{errors.email.message}</ErrorText>}
+            </FormGroup>
+
+            <SubmitButton type="submit">Continue</SubmitButton>
+          </Form>
+        </FormSection>
+      </Container>
+    </Wrapper>
   );
 };
 

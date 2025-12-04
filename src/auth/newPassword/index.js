@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import {
-  Container,
   Wrapper,
-  LeftSection,
+  Container,
+  ImageSection,
   BackgroundImage,
-  RightSection,
+  FormSection,
+  LogoWrapper,
   Logo,
   Title,
   Subtitle,
   Form,
-  InputGroup,
+  FormGroup,
   Label,
   InputWrapper,
   Input,
@@ -42,21 +43,24 @@ const CreatePassword = () => {
   };
 
   return (
-    <Container>
-      <Wrapper>
-        <LeftSection>
+    <Wrapper>
+      <Container>
+        <ImageSection>
           <BackgroundImage src={cover} alt="Background" />
-        </LeftSection>
+        </ImageSection>
 
-        <RightSection>
-          <Logo src={logo} alt="Main Logo" />
+        <FormSection>
+          <LogoWrapper>
+            <Logo src={logo} alt="Main Logo" />
+          </LogoWrapper>
+
           <Title>Create New Password</Title>
           <Subtitle>
             Please Enter your Password and Confirm Password
           </Subtitle>
 
           <Form onSubmit={handleSubmit(onSubmit)}>
-            <InputGroup>
+            <FormGroup>
               <Label htmlFor="password">Password</Label>
               <InputWrapper>
                 <Input
@@ -84,9 +88,9 @@ const CreatePassword = () => {
               {errors.password && (
                 <ErrorText>{errors.password.message}</ErrorText>
               )}
-            </InputGroup>
+            </FormGroup>
 
-            <InputGroup>
+            <FormGroup>
               <Label htmlFor="confirmPassword">Confirm Password</Label>
               <InputWrapper>
                 <Input
@@ -110,13 +114,13 @@ const CreatePassword = () => {
               {errors.confirmPassword && (
                 <ErrorText>{errors.confirmPassword.message}</ErrorText>
               )}
-            </InputGroup>
+            </FormGroup>
 
             <SubmitButton type="submit">Continue</SubmitButton>
           </Form>
-        </RightSection>
-      </Wrapper>
-    </Container>
+        </FormSection>
+      </Container>
+    </Wrapper>
   );
 };
 

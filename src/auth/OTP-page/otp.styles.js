@@ -1,78 +1,123 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   font-family: 'poppins';
   background-color: #e5e7eb;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 1rem 0;
+  }
 `;
 
-export const Wrapper = styled.div`
-  flex: 1;
-  width: 100%;
-  background: white;
-  overflow: hidden;
+export const Container = styled.div`
+  font-family: 'Poppins';
   display: flex;
   flex-direction: column;
+  background: #fff;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 768px) {
     flex-direction: row;
   }
+  @media (max-width: 768px) {
+    width:100%
+  }
 `;
-
 
 export const ImageSection = styled.div`
   position: relative;
   width: 100%;
+  height: auto;
+
   @media (min-width: 768px) {
     width: 50%;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 768px) {
     display: none;
-    
   }
 `;
 
-export const ImageOverlay = styled.img`
+export const BackgroundImage = styled.img`
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  object-fit: cover;
+  @media (max-width: 768px){
+    display: none;
+  }
 `;
-
-
 
 export const FormSection = styled.div`
-  width: 100%;
+  padding: 2rem;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  width: 100%;
 
   @media (min-width: 768px) {
     width: 50%;
   }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+  }
+`;
+
+export const LogoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
 `;
 
 export const Logo = styled.img`
-  width: 9rem;
-  margin-bottom: 1.5rem;
-    margin-top: 2rem;
-
+  width: 130px;
+  height: 40px;
 `;
 
 export const Title = styled.h2`
-  font-weight: 600;
   color: #1f2937;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
   text-align: center;
-  margin-bottom: 0.25rem;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
 export const Subtitle = styled.p`
   color: #6b7280;
   font-size: 0.75rem;
+  margin-bottom: 2rem;
   text-align: center;
-  margin-bottom: 1.5rem;
-  max-width: 20rem;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
 export const OTPForm = styled.form`
@@ -132,12 +177,9 @@ export const ResendButton = styled.button`
   cursor: pointer;
   margin-bottom: 1rem;
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-  
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 
   &:hover {
     text-decoration: underline;
   }
 `;
-
-
