@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   @media (max-width: 768px) {
     align-items: flex-start;
     overflow-y: auto;
-    padding: 1rem 0;
+    padding: 0.5rem;
   }
 `;
 

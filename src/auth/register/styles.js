@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
   margin-top: 0rem;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
 `;
 
 export const Container = styled.div`
