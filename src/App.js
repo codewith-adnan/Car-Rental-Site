@@ -1,11 +1,10 @@
 import React from 'react'
- import AppRoutes from './Routes/AppRoutes'
-// import Cards from './components/Cards'
+import AppRoutes from './Routes/AppRoutes'
 const App = () => {
   return (
-    <div style={{fontFamily:"poppins"}}>
-      <AppRoutes/>
-      {/* <Cards/> */}
+    <div style={{ fontFamily: "poppins" }}>
+      <AppRoutes />
+
     </div>
   )
 }
