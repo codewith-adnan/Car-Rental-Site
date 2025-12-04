@@ -36,7 +36,7 @@ export const Container = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 768px) {
     width:100%
   }
 `;
@@ -49,7 +49,7 @@ export const ImageSection = styled.div`
   @media (min-width: 768px) {
     width: 50%;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -58,7 +58,7 @@ export const BackgroundImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  @media (max-with:420px){
+  @media (max-width: 768px){
     display: none;
   }
 `;
@@ -129,7 +129,7 @@ export const Form = styled.form`
   width: 100%;
   max-width: 400px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     max-width: 100%;
   }
 `;

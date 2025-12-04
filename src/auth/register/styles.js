@@ -26,7 +26,7 @@ export const ImageSection = styled.div`
   width: 100%;
   height: auto;
 
-  @media (max-width: 420px) {
+  @media (max-width: 768px) {
     display: none;
     height: auto;
   }
@@ -37,7 +37,7 @@ export const BackgroundImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  @media (max-with:420px){
+  @media (max-width: 768px){
     display: none;
   }
   
