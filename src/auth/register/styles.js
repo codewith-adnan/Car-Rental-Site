@@ -44,16 +44,14 @@ export const Container = styled.div`
 `;
 
 export const ImageSection = styled.div`
+  position: relative;
   width: 100%;
   height: 100vh;
-  position: relative;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
 
-  @media (max-width: 768px){
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  @media (max-width: 768px) {
     display: none;
   }
 `;

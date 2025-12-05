@@ -30,48 +30,6 @@ export const Container = styled.div`
   font-family: 'Poppins';
   display: flex;
   flex-direction: column;
-  background: #fff;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-  @media (max-width: 768px) {
-    overflow: visible;
-  }
-`;
-
-export const ImageSection = styled.div`
-  position: relative;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  @media (max-width: 768px){
-    display: none;
-  }
-`;
-
-export const BackgroundImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  @media (max-width: 768px){
-    display: none;
-  }
-`;
-
-export const FormSection = styled.div`
-  padding: 2rem;
-  background-color: #fff;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
