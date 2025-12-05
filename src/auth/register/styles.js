@@ -58,6 +58,19 @@ export const ImageSection = styled.div`
   }
 `;
 
+export const BackgroundImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  @media (max-width: 768px){
+    display: none;
+  }
+`;
+
 export const FormSection = styled.div`
   background-color: #fff;
   display: flex;
