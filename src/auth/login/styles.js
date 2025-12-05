@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   overflow-y: auto;
+  overflow-x: hidden;
 
   /* Custom Scrollbar */
   &::-webkit-scrollbar {
@@ -144,13 +145,14 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   width: 100%;
-  padding: 0.6rem 1rem; /* Reduced padding */
+  padding: 0.6rem 1rem;
   font-size: 0.875rem;
   color: #374151;
   border: 1px solid #d1d5db;
   border-radius: 0.5rem;
   outline: none;
   transition: all 0.2s;
+  box-sizing: border-box;
 
   &::placeholder {
     color: #9ca3af;
@@ -237,6 +239,7 @@ export const SubmitButton = styled.button`
   cursor: pointer;
   border-radius: 0.5rem;
   transition: background 0.2s;
+  box-sizing: border-box;
 
   &:hover {
     background: #1d4ed8;
@@ -293,4 +296,3 @@ export const ErrorText = styled.p`
   color: #ef4444;
   margin-top: 0.25rem;
 `;
-

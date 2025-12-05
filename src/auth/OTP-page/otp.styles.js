@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   overflow-y: auto;
+  overflow-x: hidden;
 
   /* Custom Scrollbar */
   &::-webkit-scrollbar {
@@ -71,7 +72,6 @@ export const BackgroundImage = styled.img`
 `;
 
 export const FormSection = styled.div`
-  padding: 2rem;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -82,6 +82,10 @@ export const FormSection = styled.div`
 
   @media (min-width: 768px) {
     width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
   }
 `;
 
@@ -124,11 +128,28 @@ export const Subtitle = styled.p`
 
 export const OTPForm = styled.form`
   display: flex;
-  justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  justify-content: center;
+  margin: 1rem 0;
   width: 100%;
   max-width: 450px;
+`;
+
+export const FormGroup = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Label = styled.label`
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  display: block;
+  width: 100%;
+  text-align: left;
 `;
 
 export const OTPInput = styled.input`
@@ -141,6 +162,7 @@ export const OTPInput = styled.input`
   font-size: 1.25rem;
   outline: none;
   transition: all 0.2s;
+  box-sizing: border-box;
 
   &:focus {
     border-color: #2563eb;
@@ -148,44 +170,53 @@ export const OTPInput = styled.input`
   }
 `;
 
-export const Timer = styled.p`
+export const Timer = styled.div`
   font-size: 0.875rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 1.5rem;
+  color: #6b7280;
+  margin: 1rem 0;
+  text-align: center;
 `;
 
 export const ContinueButton = styled.button`
   width: 100%;
-  max-width: 450px;
-  background-color: #2563eb;
+  background: #2563eb;
   color: white;
+  padding: 0.75rem;
   font-size: 0.875rem;
   font-weight: 600;
   border: none;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
   cursor: pointer;
+  border-radius: 0.5rem;
   transition: background 0.2s;
+  box-sizing: border-box;
 
   &:hover {
-    background-color: #1d4ed8;
+    background: #1d4ed8;
   }
 `;
 
 export const ResendButton = styled.button`
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #1f2937;
   background: none;
   border: none;
+  color: #2563eb;
+  font-size: 0.875rem;
+  font-weight: 500;
   cursor: pointer;
-  margin-bottom: 1rem;
-  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-
+  margin-top: 1rem;
+  
   &:hover {
     text-decoration: underline;
   }
+  
+  &:disabled {
+    color: #9ca3af;
+    cursor: not-allowed;
+    text-decoration: none;
+  }
+`;
+
+export const ErrorText = styled.p`
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
 `;

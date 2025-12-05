@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+
   /* Custom Scrollbar */
   &::-webkit-scrollbar {
     width: 8px;
@@ -152,6 +155,7 @@ export const Input = styled.input`
   border-radius: 0.5rem;
   outline: none;
   transition: all 0.2s;
+  box-sizing: border-box;
 
   &::placeholder {
     color: #9ca3af;
@@ -196,6 +200,7 @@ export const SubmitButton = styled.button`
   cursor: pointer;
   border-radius: 0.5rem;
   transition: background 0.2s;
+  box-sizing: border-box;
 
   &:hover {
     background: #1d4ed8;
