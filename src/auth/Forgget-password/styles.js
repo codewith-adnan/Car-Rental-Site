@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   overflow-y: auto;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 
   /* Custom Scrollbar */
   &::-webkit-scrollbar {
@@ -80,9 +80,15 @@ export const FormSection = styled.div`
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  box-sizing: border-box;
 
   @media (min-width: 768px) {
     width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 2rem;
   }
 `;
 
@@ -152,7 +158,7 @@ export const Input = styled.input`
   border-radius: 0.5rem;
   outline: none;
   transition: all 0.2s;
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  box-sizing: border-box;
 
   &::placeholder {
     color: #9ca3af;
@@ -175,7 +181,7 @@ export const SubmitButton = styled.button`
   cursor: pointer;
   border-radius: 0.5rem;
   transition: background 0.2s;
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  box-sizing: border-box;
 
   &:hover {
     background: #1d4ed8;

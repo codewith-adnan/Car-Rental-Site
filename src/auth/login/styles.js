@@ -200,7 +200,7 @@ export const Options = styled.div`
   margin-top: -0.5rem;
 
   @media (max-width: 480px) {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 0.5rem;
   }
@@ -217,7 +217,14 @@ export const CheckboxLabel = styled.label`
     width: 1rem;
     height: 1rem;
     border-radius: 0.25rem;
+    @media (max-width: 480px) {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
   }
+    @media (max-width: 480px) {
+      font-size: 0.75rem;
+    }
 `;
 
 export const Link = styled.button`
@@ -227,11 +234,14 @@ export const Link = styled.button`
   font-weight: 500;
   cursor: pointer;
   padding: 0;
-  font-size: inherit;
+  font-size: 1rem;
 
   &:hover {
     text-decoration: underline;
   }
+    @media (max-width: 480px) {
+      font-size: 0.75rem;
+    }
 `;
 
 export const SubmitButton = styled.button`
