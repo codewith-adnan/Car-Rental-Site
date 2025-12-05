@@ -7,7 +7,7 @@ export const Container = styled.div`
   font-family: 'poppins';
   @media (max-with:420px) {
     flex-direction: column;
-    display: flex;
+    // display: flex;
   }
 `;
 
@@ -19,7 +19,7 @@ export const Sidebar = styled.div`
   margin-right: 20px;
   @media (max-with:420px) {
     flex-direction: column;
-    display: flex;
+    // display: flex;
   }
 `;
 
