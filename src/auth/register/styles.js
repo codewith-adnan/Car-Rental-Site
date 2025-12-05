@@ -47,18 +47,6 @@ export const ImageSection = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
-
-  @media (min-width: 768px) {
-    width: 50%;
-  }
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-export const BackgroundImage = styled.img`
-  width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
