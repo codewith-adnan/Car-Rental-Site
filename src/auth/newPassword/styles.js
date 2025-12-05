@@ -79,12 +79,15 @@ export const FormSection = styled.div`
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
 
   @media (min-width: 768px) {
     width: 50%;
   }
 
   @media (max-width: 768px) {
+    width: 100%;
     padding: 2rem;
   }
 `;

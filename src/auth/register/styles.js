@@ -79,9 +79,15 @@ export const FormSection = styled.div`
   padding: 2rem;
   width: 100%;
   min-height: 100vh;
+  box-sizing: border-box;
 
   @media (min-width: 768px) {
     width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 2rem;
   }
 `;
 

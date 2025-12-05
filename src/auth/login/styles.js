@@ -60,7 +60,7 @@ export const ImageSection = styled.div`
 
 export const BackgroundImage = styled.img`
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -117,9 +117,15 @@ export const FormSection = styled.div`
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  box-sizing: border-box;
 
   @media (min-width: 768px) {
     width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 2rem;
   }
 `;
 
