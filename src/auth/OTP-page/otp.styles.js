@@ -136,6 +136,10 @@ export const OTPForm = styled.form`
   margin: 1rem 0;
   width: 100%;
   max-width: 450px;
+  @media (max-width: 768px) {
+    gap: 0.3rem;
+    max-width: 250px;
+  }
 `;
 
 export const FormGroup = styled.div`
@@ -170,6 +174,12 @@ export const OTPInput = styled.input`
   &:focus {
     border-color: #2563eb;
     box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+
+    @media (max-width: 768px) {
+      width: 0.7rem;
+      height: 1rem;
+      font-size: 0.7rem;
+    }
   }
 `;
 
@@ -192,6 +202,7 @@ export const ContinueButton = styled.button`
   border-radius: 0.5rem;
   transition: background 0.2s;
   box-sizing: border-box;
+  max-width: 450px;
 
   &:hover {
     background: #1d4ed8;
