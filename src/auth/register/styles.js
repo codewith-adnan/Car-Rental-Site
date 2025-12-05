@@ -2,14 +2,13 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   font-family: 'poppins';
-  background-color: #e5e7eb;
+  background-color: #fff;
   display: flex;
-  align-items: center; /* Center vertically */
+  align-items: center;
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  margin-top: 0rem;
-  overflow-y: auto; /* Enable scrolling */
+  overflow-y: auto;
 
   /* Custom Scrollbar */
   &::-webkit-scrollbar {
@@ -25,36 +24,28 @@ export const Wrapper = styled.div`
   &::-webkit-scrollbar-thumb:hover {
     background: #1d4ed8;
   }
-
-  @media (max-width: 768px) {
-    align-items: flex-start;
-    padding: 1rem;
-  }
 `;
 
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  max-width: 1000px;
-  margin-top: 0rem;
+  height: 100%;
+  min-height: 100vh;
   flex-direction: column;
   background: #fff;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
   overflow: hidden;
 
   @media (min-width: 768px) {
     flex-direction: row;
   }
   @media (max-width: 768px) {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    overflow: visible;
   }
 `;
 
 export const ImageSection = styled.div`
   width: 100%;
-  height: auto;
+  height: 100vh;
   position: relative;
 
   @media (min-width: 768px) {
@@ -85,37 +76,32 @@ export const FormSection = styled.div`
   flex-direction: column;
   justify-content: center; 
   align-items: center;     
-  padding: 2rem 1rem;
-  margin-top: -5rem;
+  padding: 2rem;
   width: 100%;
+  min-height: 100vh;
 
   @media (min-width: 768px) {
     width: 50%;
-    min-height: 100vh; 
   }
 `;
-
 
 export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 0rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const Logo = styled.img`
   width: 130px;
   height: 45px;
-  margin-top: 0rem;
 `;
 
 export const Title = styled.h2`
   color: #1f2937;
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   text-align: center;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
 
   @media (min-width: 768px) {
     text-align: left;
@@ -124,10 +110,9 @@ export const Title = styled.h2`
 
 export const Subtitle = styled.p`
   color: #6b7280;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   text-align: center;
-  margin-top: 0rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   @media (min-width: 768px) {
     text-align: left;
@@ -138,129 +123,128 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 1.25rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
 `;
 
 export const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 `;
 
 export const Label = styled.label`
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: #374151;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Input = styled.input`
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
   color: #374151;
   border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   outline: none;
-  height: 1.50rem;
+  transition: all 0.2s;
 
   &::placeholder {
     color: #9ca3af;
   }
 
   &:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 2px #2563eb;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
   }
 `;
 
 export const PasswordWrapper = styled.div`
   position: relative;
+  width: 100%;
 `;
 
 export const ToggleBtn = styled.button`
   position: absolute;
   top: 50%;
-  left: 96%;
+  right: 1rem;
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: rgb(114, 114, 114);
-  font-size: 0.875rem;
+  color: #6b7280;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 `;
 
 export const SubmitButton = styled.button`
-  width: 107%;
+  width: 100%;
   background: #2563eb;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
   border: none;
   cursor: pointer;
   margin-top: 1rem;
-  height: 2.75rem;
-  padding: 0.5rem 0;
-  border-radius: 0.375rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
 
   &:hover {
     background: #1d4ed8;
   }
-
-  /* opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")}; */
 `;
 
 export const DividerText = styled.p`
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #6b7280;
-  margin-top: 0.75rem;
-  margin-bottom: 1rem;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 `;
 
 export const SocialButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   width: 100%;
-  max-width: 360px;
-  margin-bottom: -5rem;
+  max-width: 450px;
 `;
 
 export const SocialButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.50rem;
+  gap: 0.75rem;
   border: 1px solid #e5e7eb;
-  border-radius: 0.375rem;
-  padding: 0.5rem 0;
-  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
   color: #374151;
   background: white;
   cursor: pointer;
+  transition: background 0.2s;
 
   &:hover {
-    background: #f3f4f6;
-  }
-
-  i {
-    font-size: 0.875rem;
+    background: #f9fafb;
   }
 `;
 
 export const SocialIcon = styled.img`
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 `;
 
 export const Link = styled.a`
   color: #2563eb;
   text-decoration: none;
-  font-size: 0.90rem;
+  font-size: 0.875rem;
   cursor: pointer;
   text-align: center;
   font-weight: 500;
@@ -269,35 +253,39 @@ export const Link = styled.a`
     text-decoration: underline;
   }
 `;
+
 export const PhoneWrapper = styled.div`
   width: 100%;
-  z-index: 99999;
+  z-index: 10;
 
   .react-tel-input {
     width: 100%;
-    background: none;
-
-    input {
-      width: 107%;
-      height: 2.70rem;
-      font-size: 0.75rem;
-      color:rgb(137, 138, 139);
+    
+    .form-control {
+      width: 100%;
+      height: auto;
+      padding: 0.75rem 1rem 0.75rem 3rem;
+      font-size: 0.875rem;
+      border-radius: 0.5rem;
       border: 1px solid #d1d5db;
-      border-radius: 0.375rem;
-      padding-left: 48px;
       
+      &:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+      }
     }
 
     .flag-dropdown {
-      border: none;
+      border-color: #d1d5db;
+      border-radius: 0.5rem 0 0 0.5rem;
+      background: transparent;
     }
   }
 `;
 
 export const ErrorText = styled.p`
-  font-size: 0.7rem;
-  color: red;
-  margin-top: 0.25rem ;
-  margin-bottom: 0rem;
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
 `;
 

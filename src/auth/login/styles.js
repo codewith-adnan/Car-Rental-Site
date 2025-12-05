@@ -1,14 +1,10 @@
-
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   font-family: 'poppins';
-  background-color: #e5e7eb;
+  background-color: #fff;
   min-height: 100vh;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,11 +24,6 @@ export const Wrapper = styled.div`
   &::-webkit-scrollbar-thumb:hover {
     background: #1d4ed8;
   }
-
-  @media (max-width: 768px) {
-    align-items: flex-start;
-    padding: 1rem;
-  }
 `;
 
 export const Container = styled.div`
@@ -41,31 +32,22 @@ export const Container = styled.div`
   flex-direction: column;
   background: #fff;
   width: 100%;
-  max-width: 1000px; /* Limit max width for better centering on large screens */
-  height: auto;
-  min-height: 600px; /* Ensure reasonable height */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  min-height: 100vh;
   overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px; /* Add some border radius */
 
   @media (min-width: 768px) {
     flex-direction: row;
   }
   @media (max-width: 768px) {
-    width: 100%;
-    min-height: auto;
-    margin-top: 2rem; /* Add some top margin on mobile */
-    margin-bottom: 2rem;
+    overflow: visible;
   }
 `;
 
 export const ImageSection = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 600px;
+  height: 100vh;
 
   @media (min-width: 768px) {
     width: 50%;
@@ -105,9 +87,8 @@ export const Logo = styled.img`
 export const Title = styled.h2`
   color: #1f2937;
   font-weight: 600;
-  font-size: 1.125rem;
-  margin-bottom: 0rem;
-  margin-top: 0rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 
   @media (min-width: 768px) {
@@ -117,8 +98,8 @@ export const Title = styled.h2`
 
 export const Subtitle = styled.p`
   color: #6b7280;
-  font-size: 0.75rem;
-  margin-bottom: 5px;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
   text-align: center;
 
   @media (min-width: 768px) {
@@ -133,86 +114,73 @@ export const FormSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  height: 100%;
   width: 100%;
+  min-height: 100vh;
 
   @media (min-width: 768px) {
     width: 50%;
   }
-
-  @media (max-width: 768px) {
-    padding: 1.5rem 1rem;
-  }
 `;
 
 export const Form = styled.form`
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
   width: 100%;
-  max-width: 400px;
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-  }
+  max-width: 450px;
 `;
 
 export const FormGroup = styled.div`
-  justify-content: center;
   width: 100%;
 `;
 
 export const Label = styled.label`
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: #374151;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   display: block;
 `;
 
 export const Input = styled.input`
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
   color: #374151;
-  height: 1.50rem;
   border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   outline: none;
-  justify-content: center;
-  align-items: center;
+  transition: all 0.2s;
 
   &::placeholder {
     color: #9ca3af;
   }
 
   &:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 2px #2563eb;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
   }
 `;
 
 export const PasswordWrapper = styled.div`
   position: relative;
+  width: 100%;
 `;
 
 export const ToggleBtn = styled.button`
   position: absolute;
   top: 50%;
-  left: 97%;
+  right: 1rem;
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: rgb(132, 132, 133);
-  font-size: 0.875rem;
+  color: #6b7280;
   cursor: pointer;
-
-  @media (max-width: 480px) {
-    top: 60%;
-    right: 0.5rem;
-    transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  
+  &:hover {
+    color: #374151;
   }
 `;
 
@@ -220,9 +188,8 @@ export const Options = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
-  gap: 0rem;
-  margin-top: 0rem;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
 
   @media (max-width: 480px) {
     flex-direction: column;
@@ -234,24 +201,25 @@ export const Options = styled.div`
 export const CheckboxLabel = styled.label`
   display: flex;
   align-items: center;
-  gap: 0rem;
+  gap: 0.5rem;
   color: #374151;
-  font-weight: 600;
   cursor: pointer;
 
   input {
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
   }
 `;
 
-export const Link = styled.a`
+export const Link = styled.button`
   color: #2563eb;
-  text-decoration: none;
-  background-color: white;
-  cursor: pointer;
+  background: none;
   border: none;
   font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
 
   &:hover {
     text-decoration: underline;
@@ -259,46 +227,39 @@ export const Link = styled.a`
 `;
 
 export const SubmitButton = styled.button`
-  width: 107%;
+  width: 100%;
   background: #2563eb;
   color: white;
-  height: 2.55rem;
-  font-size: 0.75rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 0;
-  border-radius: 0.375rem;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
 
   &:hover {
     background: #1d4ed8;
   }
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
 `;
 
-export const DividerText = styled.p`
+export const DividerText = styled.div`
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #6b7280;
-  margin-top: 12px;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 `;
 
 export const SocialButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 0rem;
-  margin-bottom: 2rem;
-  width: 60%;
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
+  gap: 1rem;
+  width: 100%;
+  max-width: 450px;
 `;
 
 export const SocialButton = styled.button`
@@ -306,32 +267,30 @@ export const SocialButton = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem;
   border: 1px solid #e5e7eb;
-  border-radius: 0.375rem;
-  padding: 0.5rem 0;
-  font-size: 0.75rem;
-  color: #374151;
+  border-radius: 0.5rem;
   background: white;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
   cursor: pointer;
+  transition: background 0.2s;
 
   &:hover {
-    background: #f3f4f6;
-  }
-
-  i {
-    font-size: 0.875rem;
+    background: #f9fafb;
   }
 `;
 
 export const SocialIcon = styled.img`
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 `;
 
 export const ErrorText = styled.p`
-  font-size: 0.7rem;
-  color: red;
+  font-size: 0.75rem;
+  color: #ef4444;
   margin-top: 0.25rem;
-  margin-bottom: 0rem;
 `;
 

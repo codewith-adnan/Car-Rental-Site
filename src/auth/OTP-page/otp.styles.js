@@ -2,12 +2,9 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   font-family: 'poppins';
-  background-color: #e5e7eb;
+  background-color: #fff;
   min-height: 100vh;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,11 +24,6 @@ export const Wrapper = styled.div`
   &::-webkit-scrollbar-thumb:hover {
     background: #1d4ed8;
   }
-
-  @media (max-width: 768px) {
-    align-items: flex-start;
-    padding: 1rem;
-  }
 `;
 
 export const Container = styled.div`
@@ -40,31 +32,22 @@ export const Container = styled.div`
   flex-direction: column;
   background: #fff;
   width: 100%;
-  max-width: 1000px;
-  height: auto;
-  min-height: 600px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  min-height: 100vh;
   overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
 
   @media (min-width: 768px) {
     flex-direction: row;
   }
   @media (max-width: 768px) {
-    width: 100%;
-    min-height: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    overflow: visible;
   }
 `;
 
 export const ImageSection = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 600px;
+  height: 100vh;
 
   @media (min-width: 768px) {
     width: 50%;
@@ -94,16 +77,11 @@ export const FormSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  height: 100%;
   width: 100%;
+  min-height: 100vh;
 
   @media (min-width: 768px) {
     width: 50%;
-  }
-
-  @media (max-width: 768px) {
-    padding: 1.5rem 1rem;
   }
 `;
 
@@ -124,9 +102,8 @@ export const Logo = styled.img`
 export const Title = styled.h2`
   color: #1f2937;
   font-weight: 600;
-  font-size: 1.125rem;
-  margin-bottom: 0rem;
-  margin-top: 0rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 
   @media (min-width: 768px) {
@@ -136,7 +113,7 @@ export const Title = styled.h2`
 
 export const Subtitle = styled.p`
   color: #6b7280;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   margin-bottom: 2rem;
   text-align: center;
 
@@ -148,44 +125,48 @@ export const Subtitle = styled.p`
 export const OTPForm = styled.form`
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 450px;
 `;
 
 export const OTPInput = styled.input`
-  width: 2.50rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   text-align: center;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   border: 1px solid #d1d5db;
   color: #374151;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   outline: none;
+  transition: all 0.2s;
 
   &:focus {
     border-color: #2563eb;
-    box-shadow: 0 0 0 2px #2563eb50;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
   }
 `;
 
 export const Timer = styled.p`
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 1.5rem;
 `;
 
 export const ContinueButton = styled.button`
-  width: 50%;
+  width: 100%;
+  max-width: 450px;
   background-color: #2563eb;
   color: white;
   font-size: 0.875rem;
   font-weight: 600;
   border: none;
-  height: 2.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  padding: 0.700rem 0;
-  border-radius: 0.375rem;
+  transition: background 0.2s;
 
   &:hover {
     background-color: #1d4ed8;
@@ -194,7 +175,7 @@ export const ContinueButton = styled.button`
 
 export const ResendButton = styled.button`
   margin-top: 1rem;
-  font-size: 0.800rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #1f2937;
   background: none;
