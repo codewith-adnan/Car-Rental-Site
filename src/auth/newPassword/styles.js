@@ -145,7 +145,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 1rem;
   font-size: 0.875rem;
   color: #374151;
   border: 1px solid #d1d5db;

@@ -30,6 +30,50 @@ export const Container = styled.div`
   font-family: 'Poppins';
   display: flex;
   flex-direction: column;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media (max-width: 768px) {
+    overflow: visible;
+  }
+`;
+
+export const ImageSection = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const BackgroundImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  @media (max-width: 768px){
+    display: none;
+  }
+`;
+
+export const FormSection = styled.div`
+  padding: 2rem;
+  background-color: #fff;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -92,36 +136,6 @@ export const FormGroup = styled.div`
 
 export const Label = styled.label`
   font-size: 0.875rem;
-  font-weight: 500;
-  color: #374151;
-  margin-bottom: 0.5rem;
-  display: block;
-`;
-
-export const Input = styled.input`
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  color: #374151;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  outline: none;
-  transition: all 0.2s;
-
-  &::placeholder {
-    color: #9ca3af;
-  }
-
-  &:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
-  }
-`;
-
-export const SubmitButton = styled.button`
-  width: 100%;
-  background: #2563eb;
-  color: white;
   padding: 0.75rem;
   font-size: 0.875rem;
   font-weight: 600;
