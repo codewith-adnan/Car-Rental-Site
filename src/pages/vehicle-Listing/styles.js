@@ -128,14 +128,13 @@ export const CarInfo = styled.div`
   display: flex;
   gap: 10px;
   font-size: 15px;
-  @media (max-width: 768px) {
-    font-size: 13px;
-    gap: 5px;
-  }
   color: #555;
   margin: 10px 0;
-    color:rgb(175, 175, 175);
-
+  color: rgb(175, 175, 175);
+  @media (max-width: 768px) {
+    font-size: 12px;
+    gap: 5px;
+  }
 `;
 
 export const PriceTag = styled.div`
@@ -150,6 +149,10 @@ export const RentButton = styled.button`
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  @media (max-width: 768px) {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 `;
 export const PriceAndButtonRow = styled.div`
   display: flex;
@@ -157,7 +160,6 @@ export const PriceAndButtonRow = styled.div`
   align-items: center;
   gap: 55px; 
   margin-top: 10px;
-
   @media (max-width: 768px) {
     gap: 10px;
   }
