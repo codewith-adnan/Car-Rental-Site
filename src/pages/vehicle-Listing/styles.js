@@ -17,6 +17,7 @@ export const Sidebar = styled.div`
   background: #fff;
   border-radius: 10px;
   margin-right: 20px;
+  box-sizing: border-box;
   @media (max-width: 768px) {
     width: 100%;
     margin-right: 0;
@@ -40,11 +41,13 @@ export const Select = styled.select`
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 100%;
+  width: 96%;
+  box-sizing: border-box;
 `;
 
 export const RangeSlider = styled.input`
-  width: 100%;
+  width: 96%;
+  box-sizing: border-box;
 `;
 
 export const CheckboxGroup = styled.div`
@@ -67,7 +70,8 @@ export const Button = styled.button`
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  width: 100%;
+  width: 96%;
+  box-sizing: border-box;
 `;
 
 export const CarGrid = styled.div`
