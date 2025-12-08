@@ -21,6 +21,7 @@ export const Sidebar = styled.div`
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
+    padding: 15px;
   }
 `;
 
@@ -39,6 +40,7 @@ export const Select = styled.select`
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  width: 100%;
 `;
 
 export const RangeSlider = styled.input`
@@ -58,7 +60,6 @@ export const CheckboxGroup = styled.div`
   }
 `;
 
-
 export const Button = styled.button`
   background-color: #2563eb;
   color: white;
@@ -66,6 +67,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  width: 100%;
 `;
 
 export const CarGrid = styled.div`
