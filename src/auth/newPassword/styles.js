@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
 
-  /* Custom Scrollbar */
+  
   &::-webkit-scrollbar {
     width: 8px;
   }
