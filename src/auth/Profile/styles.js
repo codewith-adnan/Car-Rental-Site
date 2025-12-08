@@ -88,6 +88,7 @@ export const InputGroup = styled.div`
   @media (max-width: 576px) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    width: 93%;
   }
 `;
 
@@ -141,6 +142,7 @@ export const UploadSection = styled.div`
     flex-direction: column;
     gap: 2rem;
     padding: 16px;
+    width: 90%;
   }
 `;
 
@@ -169,6 +171,9 @@ export const UploadInput = styled.input`
 
   &:focus {
     outline: none;
+  }
+  @media screen {
+    width: 90%;
   }
 `;
 

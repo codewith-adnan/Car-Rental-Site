@@ -77,8 +77,16 @@ export const Button = styled.button`
 export const CarGrid = styled.div`
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const CarCard = styled.div`
@@ -105,6 +113,9 @@ export const CarTitle = styled.div`
   h4 {
     margin: 0;
     font-size: 16px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -117,6 +128,10 @@ export const CarInfo = styled.div`
   display: flex;
   gap: 10px;
   font-size: 15px;
+  @media (max-width: 768px) {
+    font-size: 13px;
+    gap: 5px;
+  }
   color: #555;
   margin: 10px 0;
     color:rgb(175, 175, 175);
@@ -142,4 +157,8 @@ export const PriceAndButtonRow = styled.div`
   align-items: center;
   gap: 55px; 
   margin-top: 10px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
 `;
