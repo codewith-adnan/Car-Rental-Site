@@ -7,6 +7,7 @@ export const Container = styled.div`
   font-family: 'poppins';
   @media (max-width: 768px) {
     flex-direction: column;
+    padding: 10px;
   }
 `;
 
@@ -20,7 +21,6 @@ export const Sidebar = styled.div`
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
-    margin-left: -10px;
   }
 `;
 
