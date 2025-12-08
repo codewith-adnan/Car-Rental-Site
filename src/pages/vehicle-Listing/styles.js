@@ -20,6 +20,7 @@ export const Sidebar = styled.div`
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
+    margin-left: -10px;
   }
 `;
 
