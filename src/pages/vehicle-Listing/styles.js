@@ -5,9 +5,8 @@ export const Container = styled.div`
   padding: 20px;
   background: #f9f9f9;
   font-family: 'poppins';
-  @media (max-with:420px) {
+  @media (max-width: 768px) {
     flex-direction: column;
-    // display: flex;
   }
 `;
 
@@ -17,9 +16,10 @@ export const Sidebar = styled.div`
   background: #fff;
   border-radius: 10px;
   margin-right: 20px;
-  @media (max-with:420px) {
-    flex-direction: column;
-    // display: flex;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 `;
 
